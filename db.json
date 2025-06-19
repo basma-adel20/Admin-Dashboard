@@ -1,0 +1,77 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Omar Ammar",
+      "email": "admin123@example.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Zain Nasser",
+      "email": "guest123@example.com",
+      "password": "guest123",
+      "role": "guest"
+    },
+    {
+      "id": "3",
+      "name": "Kareem Khalid",
+      "email": "guest456@example.com",
+      "password": "guest456",
+      "role": "guest"
+    }
+  ],
+  "properties": [
+    {
+      "id": "1",
+      "title": "Seaside Villa",
+      "description": "A beautiful villa by the sea with private beach access.",
+      "type": "villa",
+      "pricePerNight": 200,
+      "location": "Santorini, Greece",
+      "imageUrl": "https://dsvgjymmlgbkpexngmjh.supabase.co/storage/v1/object/public/images/SK%203.jpg",
+      "available": true
+    },
+    {
+      "id": "2",
+      "title": "City Studio Apartment",
+      "description": "Modern studio in the heart of the city.",
+      "type": "studio",
+      "pricePerNight": 75,
+      "location": "New York, USA",
+      "imageUrl": "https://dsvgjymmlgbkpexngmjh.supabase.co/storage/v1/object/public/images/SK%203.jpg",
+      "available": true
+    },
+    {
+      "id": "3",
+      "title": "Mountain Apartment",
+      "description": "Cozy apartment with stunning mountain views.",
+      "type": "apartment",
+      "pricePerNight": 120,
+      "location": "Zermatt, Switzerland",
+      "imageUrl": "https://dsvgjymmlgbkpexngmjh.supabase.co/storage/v1/object/public/images/SK%203.jpg",
+      "available": false
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1",
+      "propertyId": 1,
+      "guestName": "Alice Smith",
+      "guestEmail": "alice@example.com",
+      "checkIn": "2025-07-01",
+      "checkOut": "2025-07-07",
+      "status": "confirmed"
+    },
+    {
+      "id": "2",
+      "propertyId": 2,
+      "guestName": "John Doe",
+      "guestEmail": "john@example.com",
+      "checkIn": "2025-06-20",
+      "checkOut": "2025-06-23",
+      "status": "pending"
+    }
+  ]
+}
