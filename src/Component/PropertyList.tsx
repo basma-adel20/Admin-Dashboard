@@ -1,5 +1,4 @@
 import React from 'react'
-// src/pages/PropertiesList.tsx
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
@@ -63,7 +62,7 @@ export default function PropertyList()  {
     }
   };
 
-  // Pagination logic
+  // Pagination 
   const indexOfLastProperty = currentPage * propertiesPerPage;
   const indexOfFirstProperty = indexOfLastProperty - propertiesPerPage;
   const currentProperties = properties.slice(indexOfFirstProperty, indexOfLastProperty);
@@ -93,7 +92,7 @@ export default function PropertyList()  {
       <div className="bg-white shadow rounded-lg overflow-hidden">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-[#443120]">
+            <thead className="bg-[#443120] dark:bg-[#000]">
               <tr>
                 <th className="px-6 py-3 text-left text-xs font-medium text-[#fff] uppercase tracking-wider">Image</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-[#fff] uppercase tracking-wider">Title</th>
@@ -223,14 +222,14 @@ export default function PropertyList()  {
       <div className="flex  justify-end items-center mt-8">
         <Link
           to="/properties/add"
-          className="flex items-center bg-[#443120] hover:bg-[#443120] text-white px-4 py-2 rounded-lg transition duration-200"
+          className="flex items-center bg-[#443120] dark:bg-[#000] dark:hover:bg-[#443120] hover:bg-[#443120] text-white px-4 py-2 rounded-lg transition duration-200"
         >
           <PlusIcon className="h-5 w-5 mr-2" />
           Add Property
         </Link>
       </div>
 
-      {/* Delete Confirmation Modal */}
+      {/* confirm Delete  */}
       {showDeleteModal && (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6">

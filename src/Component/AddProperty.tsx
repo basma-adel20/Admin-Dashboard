@@ -1,4 +1,3 @@
-// src/pages/AddProperty.tsx
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
@@ -33,12 +32,10 @@ export default function AddProperty() {
         
         const properties: Property[] = await response.json();
         
-        // Extract all numeric IDs
         const numericIds = properties
           .map(property => parseInt(property.id))
           .filter(id => !isNaN(id));
         
-        // Calculate next ID (max + 1 or default to 1)
         const maxId = numericIds.length > 0 ? Math.max(...numericIds) : 0;
         setNextId((maxId + 1).toString());
         
@@ -124,18 +121,6 @@ export default function AddProperty() {
       >
         {({ isSubmitting }) => (
           <Form className="bg-white shadow rounded-lg px-10 py-8">
-            {/* <div className="mb-4">
-              <label htmlFor="id" className="block text-sm font-medium text-gray-700">
-                Property ID (auto-generated)
-              </label>
-              <Field
-                name="id"
-                type="text"
-                disabled
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 sm:text-sm"
-              />
-            </div> */}
-
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
                 <label htmlFor="title" className="block text-sm font-medium text-gray-700">
@@ -240,7 +225,7 @@ export default function AddProperty() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#443120] hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+                className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#443120] dark:bg-[#000] dark:hover:bg-[#443120]  hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
               >
                 {isSubmitting ? (
                   <span className="flex items-center">

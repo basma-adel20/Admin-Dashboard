@@ -12,6 +12,10 @@ body {
   background-color: #f9e5d492;
 }
 
+/* .dark body {
+  background-color: #1a202c; 
+} */
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -24,9 +28,24 @@ input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  -webkit-text-fill-color: #1a1a1a; /* Your text color */
-  -webkit-box-shadow: 0 0 0px 1000px white inset; /* Your bg color */
-  transition: background-color 5000s ease-in-out 0s; /* Prevent re-application */
+  -webkit-text-fill-color: #1a1a1a; 
+  -webkit-box-shadow: 0 0 0px 1000px white inset; 
+  transition: background-color 5000s ease-in-out 0s;
   caret-color: #1a1a1a; /* Cursor color */
 }
 
+:root {
+    /* Light theme */
+    --color-primary: 68 49 32;       /* #443120 */
+    --color-primary-light: 182 174 162; /* #B6AEA2 */
+    --color-bg: 255 255 255;         /* #FFFFFF */
+    --color-text: 26 26 26;          /* #1A1A1A */
+  }
+
+  .dark {
+    /* Dark theme */
+    --color-primary: 209 199 183;    /* #D1C7B7 */
+    --color-primary-light: 138 125 107; /* #8A7D6B */
+    --color-bg: 26 26 26;            /* #1A1A1A */
+    --color-text: 247 250 252;       /* #F7FAFC */
+  }

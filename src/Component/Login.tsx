@@ -1,4 +1,3 @@
-// src/pages/Login.tsx
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
@@ -41,7 +40,6 @@ export default function Login() {
       const response = await fetch('http://localhost:3001/users?email=' + encodeURIComponent(values.email));
       const users: User[] = await response.json();
       
-      // Check if user exists and credentials match
       const user = users.find(
         u => u.email === values.email && u.password === values.password
       );
@@ -51,13 +49,11 @@ export default function Login() {
         return;
       }
       
-      // Check if user is admin
       if (user.role !== 'admin') {
         setLoginError('Only admin users can login');
         return;
       }
       
-      // Store user data in localStorage
       localStorage.setItem('authToken', JSON.stringify({
         id: user.id,
         name: user.name,
