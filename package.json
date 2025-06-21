@@ -22,6 +22,7 @@
     "web-vitals": "^2.1.4",
     "yup": "^1.6.1"
   },
+  "homepage": "https://basma-adel20.github.io/Admin-Dashboard/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -49,6 +50,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.5",
     "tailwindcss": "^3.4.17"
   }
